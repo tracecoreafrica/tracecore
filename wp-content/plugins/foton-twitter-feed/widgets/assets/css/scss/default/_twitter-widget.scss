@@ -1,0 +1,167 @@
+/* ==========================================================================
+   Twitter widget style - begin
+   ========================================================================== */
+
+.widget.widget_mkdf_twitter_widget {
+	margin: 0 0 20px;
+	
+	.mkdf-twitter-widget {
+		@include mkdfRelativeHolderLayout();
+		margin: 0;
+		
+		li {
+			@include mkdfRelativeHolderLayout();
+			
+			&:not(:last-child) {
+				margin: 0 0 22px;
+			}
+			
+			.mkdf-twitter-icon {
+				font-size: 18px;
+				color: $first-main-color;
+			}
+			
+			.mkdf-tweet-text {
+				position: relative;
+				
+				span {
+					color: $default-text-color;
+				}
+				
+				a {
+					position: relative;
+					color: $default-text-color;
+					
+					&:hover {
+						color: $first-main-color;
+					}
+					
+					&.mkdf-tweet-time {
+						display: block;
+						
+						span {
+							margin: 0 2px 0 0;
+						}
+					}
+				}
+			}
+		}
+		
+		&.mkdf-twitter-standard {
+			
+			li {
+				
+				.mkdf-twitter-icon {
+					position: absolute;
+					top: 2px;
+					left: 0;
+				}
+				
+				.mkdf-tweet-text {
+					padding: 0 0 0 40px;
+				}
+			}
+		}
+		
+		&.mkdf-twitter-slider {
+			@include mkdfRelativeHolderLayout();
+			padding: 0 40px;
+			text-align: center;
+			box-sizing: border-box;
+			
+			li {
+				overflow: hidden;
+				
+				.mkdf-tweet-text {
+					
+					a {
+						
+						&.mkdf-tweet-time {
+							margin: 21px 0 0;
+						}
+					}
+				}
+			}
+			
+			.owl-nav {
+				
+				.owl-prev {
+					left: 0;
+				}
+				
+				.owl-next {
+					right: 0;
+				}
+			}
+		}
+
+		&.mkdf-twitter-speech-bubble {
+
+			li {
+
+				.mkdf-tweet-text {
+					background: rgba(#000, 0.1);
+					font-size: 14px;
+					border-radius: 10px;
+					margin: 0 0 34px;
+					padding: 13px 20px 19px;
+					line-height: 24px;
+
+					&:after {
+						top: 100%;
+						left: 36px;
+						content: " ";
+						position: absolute;
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 20px 20px 0 0;
+						border-color: rgba(#000, 0.1) transparent transparent transparent;
+					}
+				}
+
+				.mkdf-twitter-bottom-holder {
+					@include mkdfRelativeHolderLayout();
+
+					.mkdf-twitter-icon {
+						position: absolute;
+						left: 20px;
+						top: calc(50% - 2px);
+						@include mkdfTransform(translateY(-50%));
+						color: #fff;
+						background-color: #2fb1ea;
+						width: 32px;
+						height: 32px;
+						border-radius: 50%;
+						line-height: 37px;
+						text-align: center;
+					}
+
+					.mkdf-twitter-user-name-time-holder {
+						padding: 0 0 0 71px;
+						line-height: 18px;
+
+						.mkdf-twitter-user-name {
+							display: block;
+							font-family: $default-heading-font;
+							font-weight: 400;
+							font-size: 18px;
+						}
+
+						.mkdf-tweet-time {
+							font-size: 11px;
+							font-family: $default-heading-font;
+							font-weight: 400;
+							letter-spacing: 0.125em;
+							text-transform: uppercase;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Twitter widget style - end
+   ========================================================================== */

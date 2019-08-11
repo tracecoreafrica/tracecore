@@ -1,0 +1,139 @@
+/* ==========================================================================
+   Image With Text shortcode style - begin
+   ========================================================================== */
+
+.mkdf-image-with-text-holder {
+    @include mkdfRelativeHolderLayout();
+	
+	&.mkdf-has-shadow {
+		
+		.mkdf-iwt-image {
+			box-shadow: $default-box-shadow;
+		}
+	}
+	
+	.mkdf-iwt-image {
+		@include mkdfRelativeHolderLayout();
+		
+		a {
+			position: relative;
+			display: block;
+		}
+
+		img {
+            border-radius: 8px;
+            border: 1px solid #dfe8ff;
+			position: relative;
+			display: block;
+		}
+	}
+	
+	.mkdf-iwt-text-holder {
+		@include mkdfRelativeHolderLayout();
+        text-align: center;
+	}
+	
+	.mkdf-iwt-title {
+		margin: 32px 0 0;
+	}
+	
+	.mkdf-iwt-text {
+		margin: 14px 0 0;
+	}
+	
+	/***** Custom Link Behavior Style - begin *****/
+	
+	&.mkdf-image-behavior-custom-link {
+		
+		.mkdf-iwt-image {
+			img {
+				@include mkdfTransition(all 0.3s cubic-bezier(0.02, 0.54, 0.58, 1));
+			}
+
+			&:hover {
+				img {
+					@include mkdfTransform(translate3d(0, -20px, 0));
+					box-shadow: $default-box-shadow;
+				}
+			}
+		}
+	}
+	
+	/***** Custom Link Behavior Style - end *****/
+	
+	/***** Lightbox Behavior Style - begin *****/
+	
+	&.mkdf-image-behavior-lightbox {
+		
+		.mkdf-iwt-image {
+			
+			a {
+				@include mkdfImageOverlayHoverStyle();
+			}
+		}
+	}
+	
+	/***** Lightbox Behavior Style - end *****/
+	
+	/***** Zoom Behavior Style - begin *****/
+	
+	&.mkdf-image-behavior-zoom {
+		
+		.mkdf-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					@include mkdfTransform(scale(1.04));
+				}
+			}
+			
+			img {
+				@include mkdfTransform(scale(1));
+				@include mkdfTransitionTransform(.3s cubic-bezier(0.02, 0.54, 0.58, 1));
+			}
+		}
+	}
+	
+	/***** Zoom Behavior Style - end *****/
+	
+	/***** Grayscale Behavior Style - begin *****/
+	
+	&.mkdf-image-behavior-grayscale {
+		
+		.mkdf-iwt-image {
+			overflow: hidden;
+			
+			.touch & {
+				cursor: pointer;
+			}
+			
+			&:hover {
+				
+				img {
+					-webkit-filter: grayscale(0);
+					filter: none;
+				}
+			}
+			
+			img {
+				filter: url('img/desaturate.svg#grayscale');
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				filter: gray;
+				filter: grayscale(100%);
+				@include mkdfTransition(all .3s cubic-bezier(0.02, 0.54, 0.58, 1));
+			}
+		}
+	}
+	
+	/***** Grayscale Behavior Style - end *****/
+}
+/* ==========================================================================
+   Image With Text shortcode style - end
+   ========================================================================== */

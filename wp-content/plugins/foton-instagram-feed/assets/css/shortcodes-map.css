@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* common mixins - start */
+/* common mixins - end */
+/* mixins styles - start */
+/* mixins styles - end */
+/* ==========================================================================
+   Shortcodes styles
+   ========================================================================== */
+.mkdf-instagram-list-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  clear: both;
+}
+
+.mkdf-instagram-list-holder:not(.mkdf-il-one-column) .mkdf-il-item {
+  float: left;
+}
+
+.mkdf-instagram-list-holder .mkdf-instagram-carousel .mkdf-il-item {
+  width: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  float: none !important;
+}
+
+.mkdf-instagram-list-holder .mkdf-il-item {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mkdf-instagram-list-holder.mkdf-il-two-columns .mkdf-il-item {
+  width: 50%;
+}
+
+@media only screen and (min-width: 1025px) {
+  .mkdf-instagram-list-holder.mkdf-il-two-columns .mkdf-il-item:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+.mkdf-instagram-list-holder.mkdf-il-three-columns .mkdf-il-item {
+  width: 33.33333%;
+}
+
+@media only screen and (min-width: 1201px) {
+  .mkdf-instagram-list-holder.mkdf-il-three-columns .mkdf-il-item:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+.mkdf-instagram-list-holder.mkdf-il-four-columns .mkdf-il-item {
+  width: 25%;
+}
+
+@media only screen and (min-width: 1281px) {
+  .mkdf-instagram-list-holder.mkdf-il-four-columns .mkdf-il-item:nth-child(4n+1) {
+    clear: both;
+  }
+}
+
+.mkdf-instagram-list-holder.mkdf-il-five-columns .mkdf-il-item {
+  width: 20%;
+}
+
+@media only screen and (min-width: 1281px) {
+  .mkdf-instagram-list-holder.mkdf-il-five-columns .mkdf-il-item:nth-child(5n+1) {
+    clear: both;
+  }
+}
+
+/*# sourceMappingURL=../../../../plugins/foton-instagram-feed/assets/css/shortcodes-map.css.map */

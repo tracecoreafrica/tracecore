@@ -1,0 +1,18 @@
+1.1.1
+- Added WooCommerce 3.6.1 compatibility
+- Improved theme files
+- Updated Foton Core plugin to 1.1.1
+
+1.1
+- Added WooCommerce 3.5.6 compatibility
+- Improved framework files
+- Updated Foton Core plugin to 1.1
+- Updated Visual Composer to 5.7
+- Updated Revolution Slider to 5.4.8.3
+- Updated pot file
+
+1.0.2
+- Improved first main color
+
+1.0.1
+- Improved mobile header styling
